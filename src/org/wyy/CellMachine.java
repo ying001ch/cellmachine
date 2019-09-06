@@ -63,10 +63,6 @@ public class CellMachine {
 		int num =5000;
 		int k = 0;
 		while(k < num) {
-//			if(true) {
-//				continue;
-//
-//			}
 			int aliveNum=0;
 			for (int r=0;r<field.getRows();r++) {
 				for (int c=0;c<field.getCols();c++) {
@@ -98,6 +94,7 @@ public class CellMachine {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			// 计数器
 //			k++;
 		}
 		
