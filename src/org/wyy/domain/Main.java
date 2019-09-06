@@ -40,7 +40,7 @@ class Fraction {
 
 	public Fraction(int molecule, int denominator) {
 		if(denominator == 0) {
-			throw new IllegalArgumentException("·ÖÄ¸²»ÄÜÎª 0");
+			throw new IllegalArgumentException("åˆ†æ¯ä¸èƒ½ä¸º 0");
 		}
 		int gcd = getGCD(molecule, denominator);
 		this.molecule = molecule/gcd;
