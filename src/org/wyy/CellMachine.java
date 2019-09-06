@@ -37,20 +37,14 @@ public class CellMachine {
 			public void keyReleased(KeyEvent e) {
 				int keyCode = e.getKeyCode();
 				System.out.println("keycode: "+keyCode);
-				if(stop == 0) {
-					switch(keyCode) {
-						case 27:  // esc
-							stop = 1;
-							break;
-					}
-				}else {
-					switch(keyCode) {
-						case 32:  // 空格键
-							stop=0;
-							synchronized (jFrame) {
-								jFrame.notifyAll();
-							}
-							break;
+				if(keyCode == 32) { // 空格键
+					if(stop == 0){
+						stop = 1;
+					}else{
+						synchronized (jFrame) {
+							jFrame.notifyAll();
+							stop = 0;
+						}
 					}
 				}
 			}
