@@ -11,7 +11,7 @@ import org.wyy.domain.View;
 public class CellMachine {
 	public static void main(String[] args) {
 		Field field = new Field(35, 35,0.85);
-		
+
 //		View consoleView = new ConsoleView(field);
 		View view = new View(field);
 		JFrame jFrame = new JFrame("cell machine");
@@ -20,14 +20,11 @@ public class CellMachine {
 		jFrame.add(view);
 		jFrame.pack();
 		jFrame.setResizable(false);
-		
+
 		int num =5000;
 		int k = 0;
 		while(k < num) {
-			if(true) {
-				continue;
-				
-			}
+
 			int aliveNum=0;
 			for (int r=0;r<field.getRows();r++) {
 				for (int c=0;c<field.getCols();c++) {
@@ -39,24 +36,24 @@ public class CellMachine {
 					}else if(count == 3) {
 						cell.reBorn();
 					}
-					
+
 					if(cell.isAlive()) {
 						aliveNum++;
 					}
 				}
 			}
-			
+
 //			consoleView.paint();
 			jFrame.repaint();
-//			System.out.println("活细胞数量："+aliveNum);
+			System.out.println("活细胞数量："+aliveNum);
 			try {
 				Thread.sleep(80);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-//			k++;
+			k++;
 		}
-		
+
 		System.out.println("game over!");
 	}
 }

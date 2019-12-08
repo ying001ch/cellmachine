@@ -48,12 +48,12 @@ public class Field {
 		
 		Random random = new Random();
 		for (int row=0;row<rows;row++) {
-			// Ò»ÐÐ
+			// ä¸€è¡Œ
 			for (int col=0;col<cols;col++) {
-				// Ò»ÁÐ
+				// ä¸€åˆ—
 				contents[row][col] = new Cell();
 				if(random.nextDouble() < probability) {
-					// Ï¸°ûÄ¬ÈÏÊÇËÀµÄ  ¸ù¾Ý¸ø¶¨µÄ¸ÅÂÊ À´¸´»îÏ¸°û
+					// ç»†èƒžé»˜è®¤æ˜¯æ­»çš„  æ ¹æ®ç»™å®šçš„æ¦‚çŽ‡ æ¥å¤æ´»ç»†èƒž
 					contents[row][col].reBorn();
 				}
 			}
